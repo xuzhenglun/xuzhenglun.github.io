@@ -32,6 +32,6 @@ categories: 日志
 
 
   [1]: https://github.com/shadowsocks/shadowsocks/wiki/Setup-a-Shadowsocks-relay
-  [2]: /images/iptables.gif
-  [3]: /images/Azure.png
-  [4]: /images/BWG.png
+  [2]: /images/3/iptables.gif
+  [3]: /images/3/Azure.png
+  [4]: /images/3/BWG.png

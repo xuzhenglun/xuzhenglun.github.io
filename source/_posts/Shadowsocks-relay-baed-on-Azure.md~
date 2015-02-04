@@ -16,7 +16,7 @@ categories: 日志
 
     iptables -t nat -A PREROUTING -p tcp --dport 8388 -j DNAT --to-destination SS_VPS_IP:8388
     iptables -t nat -A POSTROUTING -p tcp -d SS_VPS_IP --dport 8388 -j SNAT --to-source Azure_IP
-以上只转发TCP包，应该能够实现原本基础的功能了，可是经测试**无效**。后来用TCPDUMP抓取数据包发现，在Azure的机器上，iptables出色的完成了预计的任务（如图）。可是在SS服务器上，则是一个包都没进得来。挠头之余，很是无奈啊。
+以上只转发TCP包，应该能够实现原本基础的功能了，可是经测试**无效**。检查了Azure网页中的端口映射,检查了iptables是否打开了转发,FORWARD表默认ACCEPT后都没有排除故障，只好用TCPDUMP抓取数据包。抓包后发现，在Azure的机器上，iptables出色的完成了预计的任务（如图）。可是在SS服务器上，则是一个包都没进得来。挠头之余，很是无奈啊。
 ![Azure服务器抓包][3]
 ![BWG上的抓包][4]
 后来发现，**Azure在外层有一层NAT**，所给虚拟机的IP虽然是公网IP，但是不是绑定在虚拟机网卡上的IP。Azure的防火墙在收到数据包后进行一次NAT，转发给内部虚拟机**。出去的数据包也经过一次NAT**，之后才进行发送。
