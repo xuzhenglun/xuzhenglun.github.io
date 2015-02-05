@@ -5,7 +5,7 @@ tags:
 - iptables
 - Azure
 - NAT
-categories: 服务器
+categories: 日志
 
 ---
 买BandwagonHost的VPS已经很久了，现在主要也是给朋友用。随着SS名声的变大，搬瓦工这个名字也在圈子里响当当了。用多了加上墙的变高，上海精品网等等的出现，速度越来越不理想。想来国内Azure还在免费，拿来搭个跳板机应该会有提高。

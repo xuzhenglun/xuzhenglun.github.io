@@ -6,7 +6,7 @@ tags:
 - GCC
 - 汇编
 - C语言
-categories: 代码
+categories: Code
 
 ---
 书买了半个月了，也看了前几天的量了。不过一直没动手敲代码，那便不算开始罢。书看得出日文版截稿比较早，内容环境还是基于WinXP（貌似写的WinXP都是时新货的样子XD）光盘附带的工具看得出都是Linux下的一套，Qemu，make，gcc，Makefile。之前架设这个博客的时候就受过惨痛教育（Hexo基于Node.js，上传工具用Git。在windows下用起来，别扭不说，突出一个蛋疼。）于是准备在Debian下部署环境。
@@ -36,9 +36,6 @@ qemu的执行命令和旧版本也有些许不同。旧的命令参考作者网�
 以上都可以由apt-get获取。
 
 
-----------
-
-
 # 总结
 - 搜索相关结果，旧版本GCC为了兼容老库，会自动添加下划线。而新版本的GCC不再在编译时向符号名中添加下划线。但是可以由选项重新开启这个功能。
 - ld链接也区分系统架构，mac不需要加选项可能是32位？反正是因为环境不同（在这点上，我傻逼了）。
@@ -46,5 +43,5 @@ qemu的执行命令和旧版本也有些许不同。旧的命令参考作者网�
   [1]: http://hrb.osask.jp/
   [2]: http://hrb.osask.jp/z_tools.tar.bz2
   [3]: http://blog.csdn.net/tonyshengtan/article/details/17301229
-  [4]: /image/4/1.png
-  [5]: /image/4/2.png
+  [4]: /images/4/1.png
+  [5]: /images/4/2.png
