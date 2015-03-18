@@ -85,5 +85,5 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: git
+  type: github
   repo: git@github.com:xuzhenglun/xuzhenglun.github.io.git
