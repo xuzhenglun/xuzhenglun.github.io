@@ -12,7 +12,8 @@ language: Zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://xuzhenglun.github.io
+url: https://xuzhenglun.github.io
+enforce_ssl: xuzhenglun.github.io
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
