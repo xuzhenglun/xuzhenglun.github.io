@@ -30,6 +30,10 @@ categories: 服务器
 
 这个事情真的是会的不难，难的不会，加上有个暗坑（Azure的防火墙），让本来不复杂的事情变得困难了一些。不过好处是，在给了我动力和机会实践学习了Iptables的一些概念和命令。对表，链，规则有了基本的认识学习。收益颇多，也做个笔记。
 
+---
+# December 7 2015 Updated:
+
+腾讯云测试可用
 
   [1]: https://github.com/shadowsocks/shadowsocks/wiki/Setup-a-Shadowsocks-relay
   [2]: /images/3/iptables.gif
