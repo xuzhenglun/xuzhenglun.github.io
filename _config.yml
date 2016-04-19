@@ -80,7 +80,7 @@ disqus_shortname: xuzhenglun
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: hexo-persona-color-master
+theme: yilia
 exclude_generator:
 
 # Deployment
