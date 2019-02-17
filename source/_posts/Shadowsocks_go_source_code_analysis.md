@@ -7,6 +7,13 @@ tags:
 categories: Shadowsocks
 
 ---
+
+Shodowsocks是一个小有名气的代理工具，主要致力于减小流量特征，从而达到GFW无法对其进行定向的封杀的目的。Shadowsocks有多种语言的实现，本着学习一下原理的心态，看了一下其用Go版本的实现细节。
+
+
+<!-- more -->
+
+
 # 项目结构
 
 ```

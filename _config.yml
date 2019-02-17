@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 我的窝
+title: Reficul
 subtitle:
 description:
-author: 徐正伦
+author: Reficul
 email: xuzhenglun@gmail.com
-language: Zh-CN
+language: zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -49,9 +49,9 @@ tag_map:
 ## 2: Enable pagination
 ## 1: Disable pagination
 ## 0: Fully Disable
-archive: 2
-category: 2
-tag: 2
+#archive: 2
+#category: 2
+#tag: 2
 
 # Server
 ## Hexo uses Connect as a server
@@ -80,7 +80,7 @@ disqus_shortname: xuzhenglun
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: yilia
+theme: Hacker
 exclude_generator:
 
 # Deployment
@@ -89,21 +89,21 @@ deploy:
   type: git
   repo: git@github.com:xuzhenglun/xuzhenglun.github.io.git
 
-jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: false
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-      tags: true
+  #jsonContent:
+  #  meta: false
+  #  pages: false
+  #  posts:
+  #    title: true
+  #    date: true
+  #    path: true
+  #    text: false
+  #    raw: false
+  #    content: false
+  #    slug: false
+  #    updated: false
+  #    comments: false
+  #    link: false
+  #    permalink: false
+  #    excerpt: false
+  #    categories: false
+  #    tags: true

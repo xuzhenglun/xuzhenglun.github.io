@@ -6,10 +6,11 @@ tags:
 categories: Golang
 ---
 
-最近在碰到一个很奇怪的问题，Go get工具在下载golang.org/x/tools下源代码的时候总是失败，但是以前斌没有这个问题。Chrome自带SS穿墙，发现显示：`Nothing to see here`之后就跳转到了文档页面。
-遂以为是Golang在维护因为Google Code关闭带来的影响。不过时间过去了一周，并没有改善，奇怪的是老外对此并没有哀嚎遍野。
-无意中翻到一篇文章：https://texlution.com/post/golang-canonical-import-paths/
-讲述了Go get的过程，突然发现还是因为中国特色社会主义的优越性。
+最近在碰到一个很奇怪的问题，Go get工具在下载golang.org/x/tools下源代码的时候总是失败，但是以前并没有这个问题。Chrome已经使用了Shadowsocks穿墙，但是直接访问这个URL后发现在显示`Nothing to see here`之后就跳转到了文档页面。本以为是Google Code关闭带来的影响。不过时间过去了一周，并没有改善，奇怪的是老外对此并没有哀嚎遍野。为此有必要看一下`go get`到底发生了啥了。
+
+<!-- more -->
+
+无意中翻到一篇讲述了Go get的过程的文章：`https://texlution.com/post/golang-canonical-import-paths/`.
 
 文章的意思很简单，大概说的是Go get工具会去所Import的路径下载代码，如果没有，会寻找meta标签中的别名/镜像Repo。
 
