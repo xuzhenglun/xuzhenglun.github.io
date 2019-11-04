@@ -1,0 +1,44 @@
+From 7afb5eb7574511cbb3a980814eadfe1fd1ec342b Mon Sep 17 00:00:00 2001
+From: "zhenglun.xzl" <zhenglun.xzl@alibaba-inc.com>
+Date: Tue, 5 Nov 2019 02:46:15 +0800
+Subject: [PATCH] add graphivz
+
+Change-Id: Ie5d5546451e3c957155fa7c1c2591763c6e810c0
+---
+ layout/_partials/footer.swig | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+diff --git a/layout/_partials/footer.swig b/layout/_partials/footer.swig
+index 3056cef4..27433969 100644
+--- a/layout/_partials/footer.swig
++++ b/layout/_partials/footer.swig
+@@ -69,4 +69,26 @@
+   </div>
+ {%- endif %}
+ 
++{% if theme.graphviz.enable %}
++  <script src='https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js'></script>
++  <script>
++    String.prototype.replaceAll = function(search, replacement) {
++      var target = this;
++      return target.split(search).join(replacement);
++    };
++
++    let vizObjects = document.querySelectorAll('.graphviz')
++
++    for (let item of vizObjects) {
++      let svg = undefined
++      try {
++        svg = Viz(item.textContent.replaceAll('–', '--'), 'svg')
++      } catch(e) {
++        svg = `<pre class="error">${e}</pre>`
++      }
++      item.outerHTML = svg
++    }
++  </script>
++{% endif %}
++
+ {{- next_inject('footer') }}
+-- 
+2.21.0 (Apple Git-122)
+

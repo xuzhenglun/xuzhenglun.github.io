@@ -26,15 +26,20 @@ jobs:
         sudo apt-get install yarn -y
         yarn add hexo-cli
         yarn install
-        
+
         mkdir -p ~/.ssh/
         echo "$GH_ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
         cat ~/.ssh/id_rsa | md5sum
         chmod 400 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
-        
+
         git config --global user.name 'xuzhenglun'
         git config --global user.email 'xuzhenglun@users.noreply.github.com'
+
+        git clone https://github.com/theme-next/hexo-theme-next themes/next
+        ( cd themes/next && git checkout v7.5.0 && git apply ../0001-add-graphivz.patch )
+        git clone https://github.com/theme-next/theme-next-reading-progress --depth=1 themes/next/source/lib/reading_progress
+        git clone https://github.com/theme-next/theme-next-three --depth=1 themes/next/source/lib/three
       env:
         GH_ACTION_DEPLOY_KEY: ${{secrets.GH_ACTION_DEPLOY_KEY}}
     - name: deploy

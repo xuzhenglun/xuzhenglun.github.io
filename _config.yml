@@ -33,7 +33,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 highlight:
   enable: true
@@ -80,7 +80,7 @@ disqus_shortname: xuzhenglun
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: Hacker
+theme: next
 exclude_generator:
 
 # Deployment
@@ -107,3 +107,80 @@ deploy:
   #    excerpt: false
   #    categories: false
   #    tags: true
+theme_config:
+  avatar:
+    url: /images/icon.jpg
+
+  footer:
+    since: 2015
+    copyright: Reficul
+
+  social:
+    GitHub: https://github.com/xuzhenglun || github
+    E-Mail: mailto:xuzhenglun@gmail.com || envelope
+    Twitter: https://twitter.com/xuzhenglun || twitter
+
+  social_icons:
+    enable: true
+    icons_only: false
+    transition: false
+
+  links:
+    Eric: https://farer.org/
+    Sakeven: https://sakeven.me
+    realityOne: https://reality0ne.com
+    JJY: https://justjjy.com
+    Renlulu: https://renlulu.github.io
+    Summer: https://g.yannxia.top
+    TomWei: https://tomwei7.com
+    TaoGe: https://yowenter.github.io
+    Ylck: https://ylck.me
+    Wangzhezhe: https://wangzhezhe.github.io/
+    Clark: https://blog.jinwei.me
+    Hypo: https://blog.ihypo.net
+
+  sidebar:
+    position: left
+    display: hide
+
+  symbols_count_time:
+    separated_meta: true
+    item_text_post: true
+    item_text_total: true
+    awl: 2
+    wpm: 275
+
+  creative_commons:
+    license: by-nc-sa
+    sidebar: false
+    post: true
+    language:
+
+  graphviz:
+    enable: true
+  mermaid: true
+  math:
+    per_page: true
+    mathjax:
+      enable: true
+      mhchem: false
+
+  disqus:
+    enable: true
+    shortname: xuzhenglun
+    count: false
+    lazyload: true
+    post_meta_order: 0
+
+  google_analytics:
+    tracking_id: UA-57211109-1
+    localhost_ignored: true
+
+  motion:
+    enable: false
+
+  three:
+    enable: true
+    canvas_lines: true
+
+
