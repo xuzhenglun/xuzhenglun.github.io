@@ -1,0 +1,42 @@
+name: Node CI
+
+on: 
+  push:
+    branches: 
+      - source
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: prepare build env
+      run: |
+        sudo apt-get update 
+        sudo apt-get install yarn -y
+        yarn add hexo-cli
+        yarn install
+        
+        mkdir -p ~/.ssh/
+        echo "$GH_ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+        cat ~/.ssh/id_rsa | md5sum
+        chmod 400 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        
+        git config --global user.name 'xuzhenglun'
+        git config --global user.email 'xuzhenglun@users.noreply.github.com'
+      env:
+        GH_ACTION_DEPLOY_KEY: ${{secrets.GH_ACTION_DEPLOY_KEY}}
+    - name: deploy
+      run: |
+        yarn run hexo deploy
