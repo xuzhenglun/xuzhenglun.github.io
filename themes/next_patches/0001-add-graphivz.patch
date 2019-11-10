@@ -1,7 +1,7 @@
-From 7afb5eb7574511cbb3a980814eadfe1fd1ec342b Mon Sep 17 00:00:00 2001
+From d75e4740629795972f241490d054dbabd96e9162 Mon Sep 17 00:00:00 2001
 From: "zhenglun.xzl" <zhenglun.xzl@alibaba-inc.com>
 Date: Tue, 5 Nov 2019 02:46:15 +0800
-Subject: [PATCH] add graphivz
+Subject: [PATCH 1/2] add graphivz
 
 Change-Id: Ie5d5546451e3c957155fa7c1c2591763c6e810c0
 ---
@@ -9,7 +9,7 @@ Change-Id: Ie5d5546451e3c957155fa7c1c2591763c6e810c0
  1 file changed, 22 insertions(+)
 
 diff --git a/layout/_partials/footer.swig b/layout/_partials/footer.swig
-index 3056cef4..27433969 100644
+index 3056cef..2743396 100644
 --- a/layout/_partials/footer.swig
 +++ b/layout/_partials/footer.swig
 @@ -69,4 +69,26 @@

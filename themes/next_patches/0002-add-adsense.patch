@@ -1,0 +1,25 @@
+From 837bd52edc9111c9e58514ddbc9bc036b304d961 Mon Sep 17 00:00:00 2001
+From: "zhenglun.xzl" <zhenglun.xzl@alibaba-inc.com>
+Date: Mon, 11 Nov 2019 01:34:37 +0800
+Subject: [PATCH] add adsense
+
+Change-Id: I8769e07df14926b026c3ec59508e8589cc7e833e
+---
+ layout/_partials/head/head.swig | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/layout/_partials/head/head.swig b/layout/_partials/head/head.swig
+index 4e31879..13047f9 100644
+--- a/layout/_partials/head/head.swig
++++ b/layout/_partials/head/head.swig
+@@ -96,3 +96,7 @@
+     sidebarPadding: 40
+   };
+ </script>
++
++{%- if theme.adsense.enable %}
++    <script data-ad-client="{{ theme.adsense.id }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
++{%- endif %}
+-- 
+2.21.0 (Apple Git-122)
+

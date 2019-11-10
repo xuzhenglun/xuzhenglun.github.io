@@ -183,4 +183,6 @@ theme_config:
     enable: true
     canvas_lines: true
 
-
+  adsense:
+    enable: true
+    id: ca-pub-2538407472813986
