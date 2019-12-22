@@ -1,5 +1,5 @@
 ---
-title: 监控手段
+title: Prometheus最佳实践之---监控方式
 date: 2019-12-22 23:43:28
 tags: 
  - prometheus
@@ -14,6 +14,7 @@ tags:
 
 本文章翻译自Prometheus官方文档：[Best Pratices-INSTRUMENTATION](https://prometheus.io/docs/practices/instrumentation/#how-to-instrument)
 
+<!-- more -->
 
 ## 0x1 怎么监控？
 简单的来说，就是监控一切：对于任何一个库(Library)，子系统(SubSystem)或者服务(Service)来说，都至少应该有几个指标来告诉你他们现在运行状况。数据采集部分应该是代码里不可或缺的一部分。这能够在你调查错误的时候，更容易的从告警着手，进而联系到控制台和代码。
