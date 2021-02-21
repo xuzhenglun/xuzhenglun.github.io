@@ -1,25 +1,26 @@
-From 837bd52edc9111c9e58514ddbc9bc036b304d961 Mon Sep 17 00:00:00 2001
+From 2d5c5941d47fca57d4e977e2614603964e4b83c7 Mon Sep 17 00:00:00 2001
 From: "zhenglun.xzl" <zhenglun.xzl@alibaba-inc.com>
-Date: Mon, 11 Nov 2019 01:34:37 +0800
-Subject: [PATCH] add adsense
+Date: Sun, 21 Feb 2021 22:33:29 +0800
+Subject: [PATCH] [PATCH] add adsense
 
-Change-Id: I8769e07df14926b026c3ec59508e8589cc7e833e
+Change-Id: I1957ba2b90e6dd901a9b3410bedd61ea94867ea9
 ---
  layout/_partials/head/head.swig | 4 ++++
  1 file changed, 4 insertions(+)
 
 diff --git a/layout/_partials/head/head.swig b/layout/_partials/head/head.swig
-index 4e31879..13047f9 100644
+index 8403e8f..6f17f25 100644
 --- a/layout/_partials/head/head.swig
 +++ b/layout/_partials/head/head.swig
-@@ -96,3 +96,7 @@
-     sidebarPadding: 40
-   };
- </script>
-+
+@@ -58,4 +58,8 @@
+   <script src="{{ pace_js_uri }}"></script>
+ {%- endif %}
+ 
 +{%- if theme.adsense.enable %}
 +    <script data-ad-client="{{ theme.adsense.id }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 +{%- endif %}
++
+ {{ next_config() }}
 -- 
-2.21.0 (Apple Git-122)
+2.24.3 (Apple Git-128)
 
